@@ -1,0 +1,20 @@
+<%- include('layouts/header.ejs'); -%>
+<%- include('layouts/nav.ejs'); -%>
+<div class="login">
+    <form class="login-form" action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit">Submit</button>
+        <p id="errors">
+            <div id="errors">
+              <% if(typeof(error) != 'undefined') { %>
+                <p class="errors"> <%= error %> </p>
+            <%  } %>
+            </div>
+          </p>
+    </form>
+
+</div>
+<%- include('layouts/footer.ejs'); -%>

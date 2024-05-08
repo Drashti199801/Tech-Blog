@@ -1,0 +1,32 @@
+<%- include('layouts/header.ejs'); -%>
+<%- include('layouts/admin_nav.ejs'); -%>
+<h1>Hello <%= username %></h1>
+
+<div class="blogdata">
+    <h2>List of Blogs</h2>
+    <% if (blogData.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% blogData.forEach(function(blog) { %>
+                    <tr>
+                        <td><%= blog.title %></td>
+                        <td><%- blog.content %></td> 
+                        <!-- Ajust width and height attributes for a smaller image -->
+                        <td><img src="/public/images/<%= blog.imgName %>" width="100" height="75"></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No blogs found.</p>
+    <% } %>
+</div>
+
+<%- include('layouts/footer.ejs'); -%>

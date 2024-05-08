@@ -1,0 +1,32 @@
+<%- include('layouts/header.ejs'); -%>
+<%- include('layouts/admin_nav.ejs'); -%>
+<div class="pagelist">
+    <h2>Edit Blogs</h2>
+    <% if (pageslist.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% pageslist.forEach(function(page) { %>
+                    <tr>
+                        <td><%= page.title %></td>
+                        <td> 
+                            <a href="/editpages/<%= encodeURIComponent(page.id) %>">Edit</a>
+                        </td>
+                        <td>
+                            <a href="/deletepages/<%= encodeURIComponent(page.id) %>">Delete</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No pages found.</p>
+    <% } %>
+</div>
+
+<%- include('layouts/footer.ejs'); -%>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor.js Example</title>
+    <!-- Editor.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+</head>
+<body>
+
+    <h1>Editor.js Example</h1>
+
+    <!-- Container for Editor.js -->
+    <div id="editorjs"></div>
+
+    <!-- Initialize Editor.js -->
+    <script>
+        const editor = new EditorJS({
+            holder: 'editorjs',
+            tools: {
+                // Specify your desired tools here
+                // For example, the Header tool
+                header: {
+                    class: Header,
+                    config: {
+                        placeholder: 'Enter a header',
+                        levels: [2, 3, 4],
+                        defaultLevel: 3
+                    }
+                },
+                // You can add more tools as needed
+            }
+        });
+    </script>
+</body>
+</html>

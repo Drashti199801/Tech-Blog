@@ -1,0 +1,55 @@
+<%- include('layouts/header.ejs'); -%>
+<%- include('layouts/admin_nav.ejs'); -%>
+
+<div class="addpage">
+    <h2>Add Page</h2>
+    <form action="/savedata" method="POST" enctype="multipart/form-data">
+        <label for="title">Page Title:</label>
+        <input type="text" name="title" id="title"><br>
+        <label for="image">Image:</label>
+        <input type="file" class="form-input" name="heroImage" id="heroImage"><br>
+        <textarea name="content" id="content"></textarea><br> <!-- textarea for CKEditor content -->
+        <button type="submit">Submit</button>
+    </form>
+
+         <% if (typeof(error) !== 'undefined') { %>
+        <p class="errors"><%= error %></p>
+        <% } %>
+    <p id="errors">
+        <div id="errors">
+            <% if (typeof(errors) !== 'undefined') { %>
+                <% for (let error of errors) { %>
+                    <p class="errors"><%= error.msg %></p>
+                <% } %>
+                <p class="errors">-- Please fix above errors --</p>
+            <% } %>
+</div>    
+
+<!-- Include CKEditor script -->
+<script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script> 
+
+<script>
+CKEDITOR.editorConfig = function( config ) {
+	config.toolbarGroups = [
+		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+		{ name: 'forms', groups: [ 'forms' ] },
+		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+		'/',
+		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+		{ name: 'links', groups: [ 'links' ] },
+		{ name: 'insert', groups: [ 'insert' ] },
+		'/',
+		{ name: 'styles', groups: [ 'styles' ] },
+		{ name: 'colors', groups: [ 'colors' ] },
+		{ name: 'tools', groups: [ 'tools' ] },
+		{ name: 'others', groups: [ 'others' ] },
+		{ name: 'about', groups: [ 'about' ] }
+	];
+};
+
+    CKEDITOR.replace('content'); 
+</script>
+
+<%- include('layouts/footer.ejs'); -%>
