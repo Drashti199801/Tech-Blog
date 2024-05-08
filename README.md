@@ -1,6 +1,7 @@
 **Custom CMS Website/Blog**
 **Overview**
-This project is a custom Content Management System (CMS) for creating and managing a website or blog. It allows users to dynamically add new pages or posts, edit existing ones, and manage the site's navigation menu, all through an intuitive admin panel.
+This project is a custom Content Management System (CMS) for creating and managing a website or blog. 
+It allows users to dynamically add new pages or posts, edit existing ones, and manage the site's navigation menu, all through an intuitive admin panel.
 
 **Features**
 1. Dynamic Page/Post Creation: Users can easily add new pages or posts through the admin panel, complete with titles, content, and images.
@@ -11,16 +12,16 @@ This project is a custom Content Management System (CMS) for creating and managi
 6. Responsive Design: The website/blog is designed to be fully responsive, adapting to various screen sizes and devices.
    
 **Tech Stack**
-Frontend: HTML, CSS, JavaScript, Node JS
-Backend: Node.js
-Template Engine: EJS (Embedded JavaScript)
-WYSIWYG Editor: CKEditor
-Database: MongoDB
+1. Frontend: HTML, CSS, JavaScript, Node JS
+2. Backend: Node.js
+3. Template Engine: EJS (Embedded JavaScript)
+4. WYSIWYG Editor: CKEditor
+5. Database: MongoDB
 
 **Usage**
--- Access the admin panel by navigating to /admin in your browser.
--- Log in using your credentials.
--- From the admin panel, you can:
--- Add new pages or posts.
--- Edit existing pages or posts.
--- Manage the site's navigation menu.
+1. Access the admin panel by navigating to /admin in your browser.
+2. Log in using your credentials.
+3. From the admin panel, you can:
+4. Add new pages or posts.
+5. Edit existing pages or posts.
+6. Manage the site's navigation menu.
