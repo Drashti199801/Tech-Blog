@@ -18,6 +18,14 @@ It allows users to dynamically add new pages or posts, edit existing ones, and m
 4. WYSIWYG Editor: CKEditor
 5. Database: MongoDB
 
+**Installation**
+1. Clone the repository: git clone https://github.com/yourusername/yourproject.git
+2. Navigate to the project directory: cd yourproject
+3. Install dependencies: npm install
+4. Set up MongoDB database (ensure MongoDB is installed locally or provide connection URI)
+5. Configure environment variables (if necessary)
+6. Start the server: npm start or (node index.js)
+
 **Usage**
 1. Access the admin panel by navigating to /admin in your browser.
 2. Log in using your credentials.
