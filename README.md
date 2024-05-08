@@ -19,7 +19,7 @@ It allows users to dynamically add new pages or posts, edit existing ones, and m
 5. Database: MongoDB
 
 **Installation**
-1. Clone the repository: git clone https://github.com/yourusername/yourproject.git
+1. Clone the repository: git clone [https://github.com/yourusername/yourproject.git](https://github.com/Drashti199801/Tech-Blog.git)
 2. Navigate to the project directory: cd yourproject
 3. Install dependencies: npm install
 4. Set up MongoDB database (ensure MongoDB is installed locally or provide connection URI)
