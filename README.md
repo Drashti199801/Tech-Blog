@@ -25,3 +25,5 @@ It allows users to dynamically add new pages or posts, edit existing ones, and m
 4. Add new pages or posts.
 5. Edit existing pages or posts.
 6. Manage the site's navigation menu.
+
+![image](https://github.com/Drashti199801/Tech-Blog/assets/156224544/30723c45-71a9-4727-a4af-9c7331f74493)
